@@ -18,8 +18,8 @@ export const personalInfo = {
   leetcode: "https://leetcode.com/u/Suthari_Karthik/",
   leetcodeUsername: "Suthari_Karthik",
   startupUrl: "https://www.eventbridge.tech",
-  resumePath: "/Karthik_Suthari_Resume.pdf",
-  portrait: "/assets/karthik-portrait.jpg",
+  resumePath: "./Karthik_Suthari_Resume.pdf",
+  portrait: "./assets/karthik-portrait.jpg",
   status: "Shortlisted: Workday Student Ambassador · Founder @ EventBridge",
   headline: "Engineering student-focused networks, mobile systems, and applied AI workflows.",
   summary: "Computer Science undergraduate (CGPA: 8.36/10) at CMR Engineering College and founder of EventBridge.Tech. Shortlisted as a Workday Student Ambassador. I leverage AI as an execution multiplier to rapidly prototype and build systems, while taking full ownership of database schemas, vector pipelines (pgvector), and native mobile architectures."
@@ -258,7 +258,7 @@ export const leadershipAndCommunity = [
     title: "Workday Student Ambassador (Shortlisted)",
     role: "Candidate & Hyderabad Meetup Attendee",
     location: "Deloitte University, Hyderabad",
-    image: "/assets/workday-meetup-deloitte.jpg",
+    image: "./assets/workday-meetup-deloitte.jpg",
     description: "Participated in Workday's inaugural offline developer meetup at Deloitte University Hyderabad, engaging directly with cloud platform architects and engineering executives. Following the engagement, successfully shortlisted for the competitive Workday Student Ambassador program with upcoming selection rounds.",
     badge: "Workday Ambassador Shortlist"
   },
@@ -268,7 +268,7 @@ export const leadershipAndCommunity = [
     title: "Google Cloud Build with Gemini",
     role: "Invited Builder & Participant",
     location: "Hyderabad, India",
-    image: "/assets/google-build-with-gemini.jpg",
+    image: "./assets/google-build-with-gemini.jpg",
     description: "Attended Google Cloud's in-person Build with Gemini developer summit. Explored enterprise multimodal architectures, advanced prompt engineering, Vertex AI toolsets, and connected with regional Google Cloud developer leaders.",
     badge: "Google Cloud Event"
   },
@@ -278,7 +278,7 @@ export const leadershipAndCommunity = [
     title: "iQOO 15 Launch & Quester Contest",
     role: "Exclusive Access Quester & Project Builder",
     location: "Hyderabad, India",
-    image: "/assets/iqoo-quester-badge.jpg",
+    image: "./assets/iqoo-quester-badge.jpg",
     description: "Secured an exclusive access pass to the iQOO 15 flagship launch event and participated in the afternoon competitive technical Quester contest. Built HEXNIL (AI Mobile OS Update Impact Analyzer) to study mobile OS regressions.",
     badge: "Official Community Quester"
   },
