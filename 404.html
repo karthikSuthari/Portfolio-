@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Karthik Suthari</title>
+    <script>
+      var base = window.location.pathname.replace(/\/$/, '');
+      if (!base.includes('/docs')) {
+        window.location.replace(base + '/docs/' + window.location.search + window.location.hash);
+      }
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
