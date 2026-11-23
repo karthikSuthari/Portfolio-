@@ -1,6 +1,6 @@
 import React from 'react';
 import { personalInfo } from '../data/portfolioData';
-import { Sparkles, Terminal, Code, Cpu, Lightbulb, Compass, ArrowUpRight } from 'lucide-react';
+import { Sparkles, Terminal, Code, Cpu, Lightbulb, Compass, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
 export default function FounderStory() {
   return (
@@ -13,11 +13,11 @@ export default function FounderStory() {
             The Founder Trajectory
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950">
-            Why I Build: From Campus Friction to Scaled Code
+            Why I Build: From Campus Friction to Scaled Systems
           </h2>
           <p className="text-base text-zinc-600">
             An authentic look at how my work as a student engineer evolved into founding EventBridge, 
-            building automated data infrastructure, and competing in 10+ hackathons.
+            shortlisting as a Workday Student Ambassador, and mastering high-velocity, AI-augmented product building.
           </p>
         </div>
 
@@ -42,31 +42,50 @@ export default function FounderStory() {
             <p>
               Students with complementary strengths—someone great at backend systems and someone passionate about UI/UX or machine learning—could 
               be studying in adjacent colleges or different classrooms without ever discovering each other. 
-              I realized that solving student discovery wasn't a social media problem; it was an information retrieval and networking problem.
+              I realized that solving student discovery wasn't a social media problem; it was an information retrieval, matchmaking, and mobility problem.
             </p>
           </div>
 
-          {/* Chapter 2: The Evolution */}
+          {/* Chapter 2: The Philosophy on AI & Velocity */}
           <div className="p-6 rounded-2xl bg-zinc-50 border border-zinc-200/80 space-y-3">
             <div className="flex items-center gap-2 text-xs font-mono font-bold uppercase text-zinc-500">
               <span className="w-2 h-2 rounded-full bg-zinc-900"></span>
-              <span>02. Evolution from Scripting to Systems Architecture</span>
+              <span>02. The Modern Builder Mindset</span>
             </div>
             <h3 className="text-lg font-bold text-zinc-950">
-              Moving Beyond Superficial Clones
+              AI as an Execution Multiplier, Engineering as Architectural Intent
             </h3>
             <p>
-              Early in my computer science journey, I chose to avoid building generic clones of existing apps. 
-              Instead, I focused on foundational problem solving: writing web scrapers with Puppeteer to aggregate announcements, 
-              deploying cron daemons on an Oracle Cloud VM with PM2, and integrating Discord bots for human-in-the-loop review.
+              I am candid about how I build: I leverage modern AI tools to accelerate scaffolding, iterate on components, 
+              and write boilerplate at 10x velocity. But velocity without architectural understanding creates unmaintainable software. 
+              I take deep personal ownership of <strong>why each technology is chosen</strong>:
             </p>
-            <p>
-              This evolved into <strong>OppFlux</strong>, which gave me hands-on experience in scheduling, multi-layer duplicate detection, 
-              and schema extraction with LLMs (Gemini & Groq). When building <strong>EventBridge</strong>, 
-              I tackled real engineering trade-offs: replacing Firestore with Supabase PostgreSQL to support relational integrity, 
-              authoring a client-side document compatibility layer to avoid breaking the frontend during migration, 
-              and implementing <code className="font-mono text-xs bg-zinc-200/80 px-1 py-0.5 rounded text-zinc-900">pgvector</code> for resume-based semantic matchmaking.
-            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1 text-xs">
+              <div className="p-3 bg-white rounded-lg border border-zinc-200 space-y-1">
+                <span className="font-bold text-zinc-900 block font-mono">Atomic Database Vector Search</span>
+                <span className="text-zinc-600">
+                  Using Supabase <code className="font-mono">pgvector</code> instead of standalone vector DBs to maintain atomic user transactions and zero sync lag.
+                </span>
+              </div>
+              <div className="p-3 bg-white rounded-lg border border-zinc-200 space-y-1">
+                <span className="font-bold text-zinc-900 block font-mono">Custom Compatibility Layer</span>
+                <span className="text-zinc-600">
+                  Emulating Firestore document array operations client-side when migrating to Supabase to prevent disruptive UI refactors.
+                </span>
+              </div>
+              <div className="p-3 bg-white rounded-lg border border-zinc-200 space-y-1">
+                <span className="font-bold text-zinc-900 block font-mono">Multi-Layer Deduplication</span>
+                <span className="text-zinc-600">
+                  Engineering 3-layer URL hashing, title normalization, and entity matching in OppFlux to stop crawler spam.
+                </span>
+              </div>
+              <div className="p-3 bg-white rounded-lg border border-zinc-200 space-y-1">
+                <span className="font-bold text-zinc-900 block font-mono">Unblocked Native Mobile UI</span>
+                <span className="text-zinc-600">
+                  Using Kotlin StateFlow and Coroutines in TeamNexus to render 60/120 FPS Jetpack Compose lists without UI thread lock.
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Chapter 3: Leadership & Ground Truth */}
@@ -76,7 +95,7 @@ export default function FounderStory() {
               <span>03. The Power of High-Cadence Execution</span>
             </div>
             <h3 className="text-lg font-bold text-zinc-950">
-              10+ Hackathons, National Innovation Repository & Community
+              Workday Ambassador Shortlist, YUKTI NIR & 10+ Hackathons
             </h3>
             <p>
               Building software in isolation breeds complacency. I actively put my skills to the test by competing in 
@@ -84,10 +103,10 @@ export default function FounderStory() {
               write robust APIs, and design intuitive interfaces rapidly.
             </p>
             <p>
+              Following my participation at Workday's first offline developer meetup at Deloitte University Hyderabad, 
+              I was shortlisted for the prestigious <strong>Workday Student Ambassador</strong> program. 
               As a <strong>GeeksforGeeks Campus Mantri</strong> and submitter to the Government of India's 
-              <strong> YUKTI National Innovation Repository (NIR)</strong>, I bridge peer developers to opportunities. 
-              Whether attending Google Cloud's <em>Build with Gemini</em> summit, Workday's first offline developer meetup at Deloitte University, 
-              or competing in technical quests, I constantly immerse myself in the software ecosystem to learn how enterprise systems scale.
+              <strong> YUKTI National Innovation Repository (NIR)</strong>, I bridge peer developers to opportunities.
             </p>
           </div>
 
@@ -102,8 +121,8 @@ export default function FounderStory() {
             </h3>
             <p className="text-zinc-300 text-xs sm:text-sm leading-relaxed">
               I am currently advancing EventBridge's geospatial ride-sharing features for inter-college hackathons, 
-              exploring agentic workflows that autonomously curate campus events, and deepening my foundations in 
-              low-latency backend systems, distributed databases, and high-precision RAG architectures.
+              scaling TeamNexus's native Android integration, and exploring agentic workflows that autonomously curate campus events 
+              while deepening my foundations in low-latency backend systems and high-precision RAG architectures.
             </p>
           </div>
 

@@ -21,18 +21,18 @@ export const personalInfo = {
   startupUrl: "https://www.eventbridge.tech",
   resumePath: "/Karthik_Suthari_Resume.pdf",
   portrait: "/assets/karthik-portrait.jpg",
-  status: "Open for Fellowships, High-Growth Startup Roles & Collaborations",
+  status: "Shortlisted: Workday Student Ambassador · Founder @ EventBridge",
   headline: "Engineering student-focused networks, mobile systems, and applied AI workflows.",
-  summary: "Computer Science undergraduate (CGPA: 8.36/10) and founder of EventBridge.Tech. I combine modern full-stack systems, native Android (Jetpack Compose), semantic vector retrieval (pgvector, Gemini embeddings), and automated pipelines to build resilient products that bridge students to real-world opportunities."
+  summary: "Computer Science undergraduate (CGPA: 8.36/10) at CMR Engineering College and founder of EventBridge.Tech. Shortlisted as a Workday Student Ambassador. I leverage AI as an execution multiplier to rapidly prototype and build systems, while taking full ownership of database schemas, vector pipelines (pgvector), and native mobile architectures."
 };
 
 export const metrics = [
   { label: "B.E. CSE CGPA", value: "8.36", detail: "CMR Engineering College" },
   { label: "Class XII Score", value: "97.4%", detail: "Alphores Junior College" },
-  { label: "Hackathons", value: "10+", detail: "Competed & Built" },
+  { label: "Ambassador", value: "Workday", detail: "Shortlisted Student Ambassador" },
   { label: "Founder", value: "EventBridge", detail: "Student Opportunity Platform" },
-  { label: "Innovation Entry", value: "YUKTI NIR", detail: "National Innovation Repo" },
-  { label: "Leadership", value: "Campus Mantri", detail: "GeeksforGeeks Community" }
+  { label: "Hackathons", value: "10+", detail: "Competed & Shipped" },
+  { label: "Innovation Entry", value: "YUKTI NIR", detail: "National Innovation Repo" }
 ];
 
 export const founderInitiative = {
@@ -106,7 +106,7 @@ export const engineeringProjects = [
     category: "ai",
     role: "System Designer & AI Architect",
     github: "https://github.com/karthikSuthari/IQOO-HexNil",
-    summary: "An AI-powered Mobile OS Update Impact Analyzer engineered for the iQOO Contest. Intelligently predicts, detects, and explains how Android OS updates impact app performance and stability before and after deployment.",
+    summary: "An AI-powered Mobile OS Update Impact Analyzer engineered for the iQOO Contest in Hyderabad. Intelligently predicts, detects, and explains how Android OS updates impact app performance and stability before and after deployment.",
     problem: "When Android pushes a major OS version update, apps frequently suffer from background throttles, battery drain, or unexpected crashes. Developers and phone enthusiasts lack a systematic way to forecast and validate OS update regressions.",
     solution: "Built an intelligent evaluation loop (Predict → Prioritize → Validate → Explain → Learn). Parses OS changelogs and release notes with NLP to forecast risk, prioritizes targeted hardware/software probes, and executes matched V0 (Pre-OS) vs V1 (Post-OS) benchmark experiments.",
     stack: [
@@ -126,7 +126,7 @@ export const engineeringProjects = [
     ],
     engineeringLearnings: [
       "Engineered automated diffing algorithms across Android OS permission models and battery optimization policies.",
-      "Designed specifically for the iQOO flagship technical contest in Hyderabad, combining mobile hardware insights with software intelligence."
+      "Built specifically for the iQOO flagship technical contest in Hyderabad, combining mobile hardware insights with software intelligence."
     ]
   },
   {
@@ -254,6 +254,16 @@ export const engineeringProjects = [
 
 export const leadershipAndCommunity = [
   {
+    id: "workday-ambassador",
+    category: "Corporate Leadership Program",
+    title: "Workday Student Ambassador (Shortlisted)",
+    role: "Candidate & Hyderabad Meetup Attendee",
+    location: "Deloitte University, Hyderabad",
+    image: "/assets/workday-meetup-deloitte.jpg",
+    description: "Participated in Workday's inaugural offline developer meetup at Deloitte University Hyderabad, engaging directly with cloud platform architects and engineering executives. Following the engagement, successfully shortlisted for the competitive Workday Student Ambassador program with upcoming selection rounds on the 27th.",
+    badge: "Workday Ambassador Shortlist"
+  },
+  {
     id: "google-gemini",
     category: "Developer Summit",
     title: "Google Cloud Build with Gemini",
@@ -262,16 +272,6 @@ export const leadershipAndCommunity = [
     image: "/assets/google-build-with-gemini.jpg",
     description: "Attended Google Cloud's in-person Build with Gemini developer summit. Explored enterprise multimodal architectures, advanced prompt engineering, Vertex AI toolsets, and connected with regional Google Cloud developer leaders.",
     badge: "Google Cloud Event"
-  },
-  {
-    id: "workday-deloitte",
-    category: "Enterprise Tech Meetup",
-    title: "Workday Developers First Offline Meetup",
-    role: "Community Developer Attendee",
-    location: "Deloitte University, Hyderabad",
-    image: "/assets/workday-meetup-deloitte.jpg",
-    description: "Participated in Workday's inaugural offline developer meetup hosted at the Deloitte University Hyderabad campus. Interacted with enterprise software architects, cloud platform engineers, and engineering leadership on high-scale systems.",
-    badge: "Deloitte University"
   },
   {
     id: "iqoo-quester",
@@ -351,27 +351,35 @@ export const skillsCategories = [
 export const workingPhilosophy = [
   {
     number: "01",
-    title: "Execution Over Theoretical Hype",
-    description: "Ideas are abundant; working code and running deployments define true capability. When building EventBridge, HexNil, and OppFlux, I prioritized spinning up working databases, writing tests, and deploying to cloud VMs over endless planning."
+    title: "AI-Augmented Building with Architectural Intent",
+    description: "I openly leverage modern AI tools to accelerate prototyping, generate scaffolding, and build at 10x velocity. But velocity without comprehension is fragile: I deliberately understand every architectural decision, schema constraint, and data pipeline I ship—knowing why pgvector handles atomic vector search, why 3-layer deduplication prevents scraper spam, and how Kotlin StateFlow keeps mobile UIs responsive. AI is my execution multiplier; architectural ownership remains mine."
   },
   {
     number: "02",
+    title: "Execution & Prototyping Over Theoretical Hype",
+    description: "Ideas are abundant; working code and running deployments define true capability. When building EventBridge, HexNil, and OppFlux, I prioritized spinning up working databases, writing tests, and deploying to cloud VMs over endless planning."
+  },
+  {
+    number: "03",
     title: "Factual Grounding Over Unconstrained AI",
     description: "Generative AI is only as useful as its constraints. In EventBridge's resume matcher, InsureIQ's RAG system, and HexNil's changelog analyzer, I rely on pgvector similarity searches, clause chunking, and strict context injection to eliminate hallucinations."
   },
   {
-    number: "03",
+    number: "04",
     title: "Pragmatic Architecture & Velocity",
     description: "When migrating from Firestore to Supabase, instead of stalling development to rewrite hundreds of client queries, I authored a client-side document compatibility layer. Pragmatic compromises preserve momentum."
-  },
-  {
-    number: "04",
-    title: "Ground-Level Community & Mobile Immersion",
-    description: "The best product insights come from working in the trenches. Attending 10+ hackathons, Google Cloud summits, Workday meetups, and building for the iQOO launch contest showed me firsthand how developers and users interact with hardware and software."
   }
 ];
 
 export const timelineMilestones = [
+  {
+    year: "Nov 2026",
+    period: "Leadership",
+    title: "Shortlisted: Workday Student Ambassador",
+    organization: "Workday University Program",
+    description: "Shortlisted for the Workday Student Ambassador role following participation at the Deloitte University developer meetup; preparing for ambassador session on Nov 27th.",
+    type: "leadership"
+  },
   {
     year: "2024 – Present",
     period: "Undergraduate",
@@ -415,9 +423,9 @@ export const timelineMilestones = [
   {
     year: "2024",
     period: "Ecosystem",
-    title: "Ecosystem Immersion: Google, Workday & iQOO",
+    title: "Workday at Deloitte Univ & Google Build with Gemini",
     organization: "Hyderabad Tech Ecosystem",
-    description: "Participated in Google Cloud Build with Gemini, Workday's first offline meetup at Deloitte University, and iQOO 15 Quester contest.",
+    description: "Participated in Workday's first offline meetup at Deloitte University and Google Cloud Build with Gemini summit in Hyderabad.",
     type: "leadership"
   },
   {

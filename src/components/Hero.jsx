@@ -12,7 +12,8 @@ import {
   Terminal, 
   Layers,
   CheckCircle2,
-  ExternalLink
+  ExternalLink,
+  Award
 } from 'lucide-react';
 
 export default function Hero({ onOpenConnect }) {
@@ -26,6 +27,11 @@ export default function Hero({ onOpenConnect }) {
           <span className="font-mono text-zinc-500">CMR Engineering College · CSE</span>
           <span className="text-zinc-300">|</span>
           <span className="font-medium text-zinc-900">Founder of EventBridge.Tech</span>
+          <span className="text-zinc-300">|</span>
+          <span className="font-semibold text-emerald-700 flex items-center gap-1">
+            <Award className="w-3.5 h-3.5" />
+            Workday Ambassador Shortlist
+          </span>
         </div>
 
         {/* Main Grid: Copy on Left, Portrait & Cards on Right */}
@@ -40,27 +46,32 @@ export default function Hero({ onOpenConnect }) {
                 Personal Engineering Dossier
               </div>
               <h1 className="text-3xl sm:text-5xl lg:text-5xl font-extrabold tracking-tight text-zinc-950 leading-[1.12]">
-                Engineering student networks and applied AI workflows.
+                Engineering student networks, mobile systems, and applied AI workflows.
               </h1>
             </div>
 
             {/* Sub-Headline / Supporting copy */}
             <p className="text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl font-normal">
               I am a Computer Science Engineering student and product builder in Hyderabad. 
-              As the founder of <span className="font-semibold text-zinc-900 underline decoration-zinc-300 underline-offset-4">EventBridge</span>, 
-              I develop full-stack platforms, semantic vector retrieval engines (<span className="font-mono text-xs bg-zinc-100 px-1.5 py-0.5 rounded text-zinc-800">pgvector</span> + embeddings), 
-              and automated systems designed to turn fragmented campus ecosystems into coordinated student opportunities.
+              As the founder of <span className="font-semibold text-zinc-900 underline decoration-zinc-300 underline-offset-4">EventBridge</span> and 
+              shortlisted <span className="font-semibold text-zinc-900">Workday Student Ambassador</span>, 
+              I leverage AI as a 10x velocity multiplier while owning the architecture—building full-stack web platforms, 
+              native Android apps (Jetpack Compose), and semantic vector engines (<span className="font-mono text-xs bg-zinc-100 px-1.5 py-0.5 rounded text-zinc-800">pgvector</span> + embeddings).
             </p>
 
             {/* Key Differentiators / Value Proposition Pills */}
             <div className="flex flex-wrap gap-2 pt-1">
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-100 text-zinc-800 text-xs font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
+                Workday Ambassador Shortlist
+              </span>
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-100 text-zinc-800 text-xs font-medium">
+                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
                 10+ Hackathons Competitor
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-100 text-zinc-800 text-xs font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                YUKTI National Innovation Repository
+                YUKTI NIR Nominee
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-100 text-zinc-800 text-xs font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
@@ -190,7 +201,7 @@ export default function Hero({ onOpenConnect }) {
                 {/* Micro tech banner */}
                 <div className="px-3 py-2 rounded-lg bg-zinc-50 border border-zinc-100 flex items-center justify-between text-[11px] text-zinc-600 font-mono">
                   <span>Stack Focus:</span>
-                  <span className="font-semibold text-zinc-900">React · Node · Python · pgvector</span>
+                  <span className="font-semibold text-zinc-900">React · Kotlin · Python · pgvector</span>
                 </div>
 
               </div>
