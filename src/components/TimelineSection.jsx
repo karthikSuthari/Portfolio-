@@ -8,6 +8,7 @@ export default function TimelineSection() {
       case 'education': return GraduationCap;
       case 'startup': return Rocket;
       case 'hackathon': return Trophy;
+      case 'leadership': return Award;
       default: return GitBranch;
     }
   };
@@ -22,10 +23,10 @@ export default function TimelineSection() {
             Trajectory & Milestones
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-zinc-950">
-            Chronological Record of Execution
+            Milestones & Key Initiatives
           </h2>
           <p className="text-base text-zinc-600">
-            Key milestones spanning academic foundations, startup development, and ecosystem participation.
+            A record of startup execution, competitive hackathons, academic excellence, and ecosystem participation.
           </p>
         </div>
 
@@ -45,7 +46,7 @@ export default function TimelineSection() {
                 <div className="p-5 rounded-2xl bg-zinc-50 border border-zinc-200/90 shadow-subtle space-y-2 group-hover:border-zinc-300 transition-all">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <span className="font-mono text-xs font-bold text-zinc-900 px-2.5 py-0.5 rounded bg-zinc-200/70 inline-block w-fit">
-                      {item.year}
+                      {item.badge}
                     </span>
                     <span className="text-xs font-mono text-zinc-500">
                       {item.organization}

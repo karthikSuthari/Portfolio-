@@ -174,7 +174,7 @@ export default function Hero({ onOpenConnect }) {
                         <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
                         <span className="text-xs font-semibold tracking-tight">Karthik Suthari</span>
                       </div>
-                      <span className="text-[10px] font-mono text-zinc-400">Class of '28</span>
+                      <span className="text-[10px] font-mono text-zinc-400">Hyderabad · CSE</span>
                     </div>
                     <div className="text-[11px] text-zinc-300 font-mono mt-0.5 truncate">
                       Founder · EventBridge.Tech

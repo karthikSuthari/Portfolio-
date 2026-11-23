@@ -3,12 +3,11 @@ export const personalInfo = {
   role: "Student Founder & Computer Science Engineer",
   subRole: "Full-Stack Developer · Applied AI & Android Systems Builder",
   college: "CMR Engineering College, Hyderabad",
-  degree: "B.E. Computer Science Engineering (2024 – 2028)",
+  degree: "B.E. Computer Science Engineering",
   cgpa: "8.36 / 10",
   intermediate: {
     institution: "Alphores Junior College, Telangana",
-    percentage: "97.4%",
-    years: "2022 – 2024"
+    percentage: "97.4%"
   },
   location: "Medchal, Hyderabad, Telangana, India",
   email: "248r1a05aq.karthik@gmail.com",
@@ -260,7 +259,7 @@ export const leadershipAndCommunity = [
     role: "Candidate & Hyderabad Meetup Attendee",
     location: "Deloitte University, Hyderabad",
     image: "/assets/workday-meetup-deloitte.jpg",
-    description: "Participated in Workday's inaugural offline developer meetup at Deloitte University Hyderabad, engaging directly with cloud platform architects and engineering executives. Following the engagement, successfully shortlisted for the competitive Workday Student Ambassador program with upcoming selection rounds on the 27th.",
+    description: "Participated in Workday's inaugural offline developer meetup at Deloitte University Hyderabad, engaging directly with cloud platform architects and engineering executives. Following the engagement, successfully shortlisted for the competitive Workday Student Ambassador program with upcoming selection rounds.",
     badge: "Workday Ambassador Shortlist"
   },
   {
@@ -373,72 +372,63 @@ export const workingPhilosophy = [
 
 export const timelineMilestones = [
   {
-    year: "Nov 2026",
-    period: "Leadership",
+    badge: "ACTIVE RECOGNITION",
     title: "Shortlisted: Workday Student Ambassador",
     organization: "Workday University Program",
-    description: "Shortlisted for the Workday Student Ambassador role following participation at the Deloitte University developer meetup; preparing for ambassador session on Nov 27th.",
+    description: "Shortlisted for the Workday Student Ambassador role following participation at the Deloitte University developer meetup; preparing for ambassador session.",
     type: "leadership"
   },
   {
-    year: "2024 – Present",
-    period: "Undergraduate",
+    badge: "UNDERGRADUATE FOCUS",
     title: "B.E. Computer Science Engineering",
     organization: "CMR Engineering College, Hyderabad",
     description: "Maintaining an 8.36/10 CGPA while leading development on EventBridge, contributing to community initiatives, and building applied AI tools.",
     type: "education"
   },
   {
-    year: "2024",
-    period: "Founder",
+    badge: "FOUNDER VENTURE",
     title: "Founded & Architected EventBridge.Tech",
     organization: "EventBridge",
     description: "Conceived and shipped the student networking platform with semantic pgvector teammate matching, Gemini 2.5 Flash roadmap engines, and Supabase integration.",
     type: "startup"
   },
   {
-    year: "2024",
-    period: "Contest Build",
+    badge: "CONTEST SYSTEM",
     title: "Engineered HEXNIL for iQOO Mobile Contest",
     organization: "iQOO Quester Contest / Open Source",
     description: "Architected AI-powered Mobile OS Update Impact Analyzer with 5-stage Predict-Prioritize-Validate-Explain loop.",
     type: "project"
   },
   {
-    year: "2024",
-    period: "Mobile",
+    badge: "NATIVE MOBILE",
     title: "Built TeamNexus Jetpack Compose Android Client",
     organization: "Team Nexus (Hyderabad)",
     description: "Co-engineered native Android Jetpack Compose app bringing EventBridge and OppFlux live feeds to mobile devices.",
     type: "project"
   },
   {
-    year: "2024",
-    period: "Competitive",
+    badge: "COMPETITIVE BUILDING",
     title: "10+ Hackathons & InsureIQ RAG System",
     organization: "Hackathon Competitions",
     description: "Shipped InsureIQ with LangChain, semantic PDF chunking, and clause-level citation enforcement; reached 10+ hackathons milestone.",
     type: "hackathon"
   },
   {
-    year: "2024",
-    period: "Ecosystem",
+    badge: "ECOSYSTEM IMMERSION",
     title: "Workday at Deloitte Univ & Google Build with Gemini",
     organization: "Hyderabad Tech Ecosystem",
     description: "Participated in Workday's first offline meetup at Deloitte University and Google Cloud Build with Gemini summit in Hyderabad.",
     type: "leadership"
   },
   {
-    year: "2024",
-    period: "Leadership",
+    badge: "CAMPUS LEADERSHIP",
     title: "GeeksforGeeks Campus Mantri & YUKTI NIR",
     organization: "Campus & National Innovation Cell",
     description: "Appointed GfG Campus Mantri for peer developer enablement; submitted student startup blueprints to the YUKTI National Innovation Repository.",
     type: "leadership"
   },
   {
-    year: "2022 – 2024",
-    period: "Academics",
+    badge: "ACADEMIC FOUNDATION",
     title: "Class XII Intermediate (97.4%)",
     organization: "Alphores Junior College, Telangana",
     description: "Graduated with 97.4% aggregate, developing deep mathematical and analytical foundations.",
