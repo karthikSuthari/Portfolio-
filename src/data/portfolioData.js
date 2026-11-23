@@ -1,7 +1,7 @@
 export const personalInfo = {
   name: "Karthik Suthari",
   role: "Student Founder & Computer Science Engineer",
-  subRole: "Full-Stack Developer · Applied AI & Vector Search Builder",
+  subRole: "Full-Stack Developer · Applied AI & Android Systems Builder",
   college: "CMR Engineering College, Hyderabad",
   degree: "B.E. Computer Science Engineering (2024 – 2028)",
   cgpa: "8.36 / 10",
@@ -22,8 +22,8 @@ export const personalInfo = {
   resumePath: "/Karthik_Suthari_Resume.pdf",
   portrait: "/assets/karthik-portrait.jpg",
   status: "Open for Fellowships, High-Growth Startup Roles & Collaborations",
-  headline: "Engineering student-focused networks and applied AI workflows.",
-  summary: "Computer Science undergraduate (CGPA: 8.36/10) and founder of EventBridge.Tech. I combine modern full-stack systems, semantic vector retrieval (pgvector, Gemini embeddings), and automated pipelines to build resilient products that bridge students to real-world opportunities."
+  headline: "Engineering student-focused networks, mobile systems, and applied AI workflows.",
+  summary: "Computer Science undergraduate (CGPA: 8.36/10) and founder of EventBridge.Tech. I combine modern full-stack systems, native Android (Jetpack Compose), semantic vector retrieval (pgvector, Gemini embeddings), and automated pipelines to build resilient products that bridge students to real-world opportunities."
 };
 
 export const metrics = [
@@ -100,9 +100,70 @@ export const founderInitiative = {
 
 export const engineeringProjects = [
   {
+    id: "hexnil",
+    name: "HEXNIL: Mobile OS Update Impact Intelligence",
+    badge: "AI Systems · Android OS Intelligence",
+    category: "ai",
+    role: "System Designer & AI Architect",
+    github: "https://github.com/karthikSuthari/IQOO-HexNil",
+    summary: "An AI-powered Mobile OS Update Impact Analyzer engineered for the iQOO Contest. Intelligently predicts, detects, and explains how Android OS updates impact app performance and stability before and after deployment.",
+    problem: "When Android pushes a major OS version update, apps frequently suffer from background throttles, battery drain, or unexpected crashes. Developers and phone enthusiasts lack a systematic way to forecast and validate OS update regressions.",
+    solution: "Built an intelligent evaluation loop (Predict → Prioritize → Validate → Explain → Learn). Parses OS changelogs and release notes with NLP to forecast risk, prioritizes targeted hardware/software probes, and executes matched V0 (Pre-OS) vs V1 (Post-OS) benchmark experiments.",
+    stack: [
+      "Python",
+      "Android SDK",
+      "OS Benchmarking",
+      "NLP Parsing",
+      "Kotlin / Gradle",
+      "Hardware Probes"
+    ],
+    workflowSteps: [
+      { step: "01", title: "Predict", desc: "Parses Android OS changelogs and system release notes to forecast API and subsystem risk." },
+      { step: "02", title: "Prioritize", desc: "Ranks targeted workloads (rendering, memory footprint, background task scheduling)." },
+      { step: "03", title: "Validate", desc: "Executes matched V0 (pre-update) vs V1 (post-update) telemetry comparisons." },
+      { step: "04", title: "Explain", desc: "Synthesizes root-cause regression reports explaining exact changes and failure vectors." },
+      { step: "05", title: "Learn", desc: "Feeds regression findings into a historical knowledge graph to improve future update predictions." }
+    ],
+    engineeringLearnings: [
+      "Engineered automated diffing algorithms across Android OS permission models and battery optimization policies.",
+      "Designed specifically for the iQOO flagship technical contest in Hyderabad, combining mobile hardware insights with software intelligence."
+    ]
+  },
+  {
+    id: "insure-iq",
+    name: "InsureIQ: Health Insurance Policy RAG Assistant",
+    badge: "Hackathon Project · Applied AI / RAG",
+    category: "ai",
+    role: "AI & Backend Systems Developer",
+    github: "https://github.com/karthikSuthari/Health-Insurance-Policy-Simplifier",
+    summary: "A production-ready RAG system answering complex health insurance coverage questions with precise clause-level citations (page, section, clause) directly grounded in dense policy PDFs.",
+    problem: "Health insurance policies are dense, 50+ page legal documents. Policyholders struggle to verify whether specific medical treatments or room rents are covered, leading to unexpected claim rejections.",
+    solution: "A retrieval-augmented generation (RAG) system utilizing PDF parsing, semantic chunking, dense vector embeddings, and contextual prompting to constrain the LLM strictly to provided policy clauses.",
+    stack: [
+      "Python",
+      "LangChain",
+      "Dense Embeddings",
+      "Vector Retrieval",
+      "PDF Parser",
+      "LLM API",
+      "Streamlit & FastAPI"
+    ],
+    workflowSteps: [
+      { step: "01", title: "Document Chunking", desc: "Splits complex legal insurance policies using recursive character splitting preserving header hierarchy." },
+      { step: "02", title: "Embedding Indexing", desc: "Converts policy clauses into semantic vector embeddings for nearest-neighbor similarity search." },
+      { step: "03", title: "Contextual Retrieval", desc: "Fetches top-k relevant clauses matching user queries on exclusions, copays, or treatments." },
+      { step: "04", title: "Grounded Synthesis", desc: "Applies defensive prompt templates requiring citation of clause numbers and prohibiting speculative medical advice." }
+    ],
+    engineeringLearnings: [
+      "Standard token chunking fails on legal tables; semantic boundary chunking preserved policy exclusions context.",
+      "Prompt grounding constraints eliminated hallucinations in 95%+ of ambiguous claim queries."
+    ]
+  },
+  {
     id: "oppflux",
     name: "OppFlux: AI Opportunity Discovery Engine",
     badge: "Automated Data Pipeline & GenAI",
+    category: "cloud",
     role: "Lead Developer & Systems Architect",
     github: "https://github.com/karthikSuthari/OppFlux",
     summary: "An automated web intelligence pipeline that crawls the web for student tech events, synthesizes structured metadata with Gemini & Groq, and moderates content through a Discord human-in-the-loop workflow before distribution.",
@@ -116,8 +177,7 @@ export const engineeringProjects = [
       "Puppeteer",
       "Discord.js",
       "Oracle Cloud VM",
-      "PM2",
-      "Winston",
+      "PM2 & Winston",
       "Google Sheets & Drive APIs"
     ],
     workflowSteps: [
@@ -134,32 +194,60 @@ export const engineeringProjects = [
     ]
   },
   {
-    id: "health-insurance-rag",
-    name: "Health Insurance Policy RAG Assistant",
-    badge: "Hackathon Project · Applied AI / RAG",
-    role: "AI & Backend Developer",
-    github: "https://github.com/karthikSuthari/Health-Insurance-Policy-Simplifier",
-    summary: "A document-question-answering assistant that retrieves precise policy terms to answer customer queries regarding health insurance coverage, exclusions, waiting periods, and claim eligibility with strict factual grounding.",
-    problem: "Health insurance policies are dense, 50+ page legal documents. Policyholders struggle to verify whether specific medical treatments or room rents are covered, leading to unexpected claim rejections.",
-    solution: "A retrieval-augmented generation (RAG) system utilizing PDF parsing, semantic chunking, dense vector embeddings, and contextual prompting to constrain the LLM strictly to provided policy clauses.",
+    id: "team-nexus",
+    name: "TeamNexus: Native Mobile Platform",
+    badge: "Native Android · Jetpack Compose",
+    category: "mobile",
+    role: "Mobile Co-Founder & Android Engineer",
+    github: "https://github.com/karthikSuthari/TeamNexus",
+    summary: "A modern native Android application built with Kotlin and Jetpack Compose (Material 3 Dark Theme), bringing EventBridge's AI Team Match and OppFlux live feed directly to students' smartphones.",
+    problem: "Students attending hackathons and campus events need rapid, on-the-go notifications, instant teammate discovery, and low-latency access to event schedules without relying on mobile web browsers.",
+    solution: "Architected a high-performance native Android application featuring MVVM architecture, StateFlow reactive state management, and direct integration with EventBridge and OppFlux backends.",
     stack: [
-      "Python",
-      "LangChain",
-      "Vector Search",
-      "Dense Embeddings",
-      "PDF Plumber / PyPDF",
-      "LLM API",
-      "Streamlit / REST"
+      "Kotlin",
+      "Jetpack Compose",
+      "Material 3 (Dark)",
+      "MVVM Architecture",
+      "StateFlow & Coroutines",
+      "OkHttp & kotlinx.serialization"
     ],
     workflowSteps: [
-      { step: "01", title: "Document Chunking", desc: "Splits complex legal insurance policies using recursive character splitting preserving header hierarchy." },
-      { step: "02", title: "Embedding Indexing", desc: "Converts policy clauses into semantic vector embeddings for nearest-neighbor similarity search." },
-      { step: "03", title: "Contextual Retrieval", desc: "Fetches top-k relevant clauses matching user queries on exclusions, copays, or treatments." },
-      { step: "04", title: "Grounded Synthesis", desc: "Applies defensive prompt templates requiring citation of clause numbers and prohibiting speculative medical advice." }
+      { step: "01", title: "Mobile Ingestion", desc: "Fetches live event and teammate candidate feeds over SSL-encrypted REST endpoints." },
+      { step: "02", title: "Reactive UI State", desc: "Uses Kotlin StateFlow and Coroutines for unblocked UI rendering at 60/120 FPS." },
+      { step: "03", title: "AI Team Match", desc: "Surfaces complementary student matches based on required project skills and domains." },
+      { step: "04", title: "OppFlux Stream", desc: "Streams real-time updates for live hackathons, registrations, and tech competitions." }
     ],
     engineeringLearnings: [
-      "Standard token chunking fails on legal tables; semantic boundary chunking preserved policy exclusions context.",
-      "Prompt grounding constraints eliminated hallucinations in 95%+ of ambiguous claim queries."
+      "Co-developed in Hyderabad with Team Nexus (Karthik, Surya, Diamond), fostering agile teamwork and code review rigor.",
+      "Engineered memory-efficient Compose lists and state hoisting to prevent recomposition bottlenecks."
+    ]
+  },
+  {
+    id: "gigpoint",
+    name: "GiGPoint: Commerce Platform & Blueprint",
+    badge: "Full-Stack Web & Product Design",
+    category: "fullstack",
+    role: "Product Architect & Full-Stack Engineer",
+    github: "https://github.com/karthikSuthari/GiGPoint",
+    summary: "A comprehensive customer-centric mobile commerce platform blueprint and implementation (Next.js, TypeScript, Supabase) designed with full product requirements, user journey maps, and database schemas.",
+    problem: "Specialized service commerce platforms suffer from fragmented order tracking, unclear user flows, and poorly structured relational databases for order fulfillment.",
+    solution: "Delivered a complete product engineering blueprint: competitor analysis, Google Stitch high-fidelity wireframes, comprehensive Supabase relational schemas, and Next.js frontend architecture.",
+    stack: [
+      "Next.js 14",
+      "TypeScript",
+      "Supabase / PostgreSQL",
+      "Tailwind CSS",
+      "System Architecture",
+      "Stitch Wireframing"
+    ],
+    workflowSteps: [
+      { step: "01", title: "Research & Journey", desc: "Mapped end-to-end user journeys and competitor capabilities across industrial commerce platforms." },
+      { step: "02", title: "Schema Design", desc: "Authored relational SQL schemas in Supabase for inventory, customer orders, and tracking." },
+      { step: "03", title: "High-Fi Blueprint", desc: "Created interactive wireframe prototypes using Google Stitch and documented milestones in Notion." }
+    ],
+    engineeringLearnings: [
+      "Wrote production-ready Supabase SQL migrations with relational integrity and seed scripts.",
+      "Bridged UX product thinking with rigorous backend schema design."
     ]
   }
 ];
@@ -188,11 +276,11 @@ export const leadershipAndCommunity = [
   {
     id: "iqoo-quester",
     category: "Technology Launch & Contest",
-    title: "iQOO 15 Mobile Launch & Quester Contest",
-    role: "Exclusive Access Quester",
+    title: "iQOO 15 Launch & Quester Contest",
+    role: "Exclusive Access Quester & Project Builder",
     location: "Hyderabad, India",
     image: "/assets/iqoo-quester-badge.jpg",
-    description: "Secured exclusive access pass to the iQOO 15 mobile flagship launch event and participated in the afternoon competitive technical Quester contest, testing mobile hardware architecture and gaming performance capabilities.",
+    description: "Secured an exclusive access pass to the iQOO 15 flagship launch event and participated in the afternoon competitive technical Quester contest. Built HEXNIL (AI Mobile OS Update Impact Analyzer) to study mobile OS regressions.",
     badge: "Official Community Quester"
   },
   {
@@ -236,7 +324,7 @@ export const skillsCategories = [
   {
     category: "Full-Stack & Backend",
     description: "Production web applications and high-throughput APIs",
-    skills: ["React 18", "Node.js", "Express.js", "Python / FastAPI", "REST APIs", "Webhooks", "HTML5 & CSS3", "Tailwind CSS"]
+    skills: ["React 18", "Next.js", "Node.js", "Express.js", "Python / FastAPI", "REST APIs", "Webhooks", "HTML5 & CSS3", "Tailwind CSS"]
   },
   {
     category: "Applied AI & Vector Retrieval",
@@ -244,19 +332,19 @@ export const skillsCategories = [
     skills: ["RAG Systems", "PostgreSQL pgvector", "Gemini 2.5 Flash", "Gemini API", "Groq / Llama 3.3", "Dense Embeddings", "TF-IDF & Cosine Similarity", "LangChain", "Prompt Engineering"]
   },
   {
+    category: "Native Android & Mobile Systems",
+    description: "Modern Android development & OS update intelligence",
+    skills: ["Android Studio", "Kotlin", "Jetpack Compose", "Material 3", "MVVM & StateFlow", "Coroutines", "OkHttp", "OS Telemetry Probes"]
+  },
+  {
     category: "Databases & Cloud Infrastructure",
     description: "Data persistence, cloud hosting, and process orchestration",
     skills: ["Supabase", "PostgreSQL", "MySQL", "Oracle Cloud VM", "PM2 Process Manager", "GitHub Actions", "Sentry Telemetry", "Winston Logging"]
   },
   {
-    category: "Automation, Mobile & Tooling",
-    description: "Web scraping, Android development, and collaboration tools",
-    skills: ["Puppeteer Headless", "Discord.js Bot SDK", "Google Sheets & Drive APIs", "Android Studio", "Jetpack Compose", "Git & GitHub"]
-  },
-  {
-    category: "Core Foundations",
-    description: "Algorithmic thinking and engineering practices",
-    skills: ["Data Structures & Algorithms", "Object-Oriented Programming (OOP)", "Database Schema Design", "System Architecture & Modular Design"]
+    category: "Automation, Tooling & Foundations",
+    description: "Web scraping, bot SDKs, algorithms and OOP",
+    skills: ["Puppeteer Headless", "Discord.js Bot SDK", "Google Sheets & Drive APIs", "Git & GitHub", "Data Structures & Algorithms", "OOP & System Design"]
   }
 ];
 
@@ -264,12 +352,12 @@ export const workingPhilosophy = [
   {
     number: "01",
     title: "Execution Over Theoretical Hype",
-    description: "Ideas are abundant; working code and running deployments define true capability. When building EventBridge and OppFlux, I prioritized spinning up working databases, writing tests, and deploying to Oracle Cloud VMs over endless planning."
+    description: "Ideas are abundant; working code and running deployments define true capability. When building EventBridge, HexNil, and OppFlux, I prioritized spinning up working databases, writing tests, and deploying to cloud VMs over endless planning."
   },
   {
     number: "02",
     title: "Factual Grounding Over Unconstrained AI",
-    description: "Generative AI is only as useful as its constraints. In both EventBridge's resume matcher and the Health Insurance Assistant, I rely on pgvector similarity searches, chunking, and strict context injection to eliminate hallucinations."
+    description: "Generative AI is only as useful as its constraints. In EventBridge's resume matcher, InsureIQ's RAG system, and HexNil's changelog analyzer, I rely on pgvector similarity searches, clause chunking, and strict context injection to eliminate hallucinations."
   },
   {
     number: "03",
@@ -278,8 +366,8 @@ export const workingPhilosophy = [
   },
   {
     number: "04",
-    title: "Ground-Level Community Understanding",
-    description: "The best product insights come from sitting in the audience and working in the trenches. Attending 10+ hackathons, Google Cloud summits, and Workday meetups showed me firsthand how student developers collaborate."
+    title: "Ground-Level Community & Mobile Immersion",
+    description: "The best product insights come from working in the trenches. Attending 10+ hackathons, Google Cloud summits, Workday meetups, and building for the iQOO launch contest showed me firsthand how developers and users interact with hardware and software."
   }
 ];
 
@@ -302,18 +390,26 @@ export const timelineMilestones = [
   },
   {
     year: "2024",
-    period: "Engineering",
-    title: "Engineered OppFlux Automation Pipeline",
-    organization: "Open Source Initiative",
-    description: "Built automated Puppeteer crawling pipeline, integrated Gemini/Groq JSON extraction, and deployed a human-in-the-loop Discord moderation bot on Oracle Cloud.",
+    period: "Contest Build",
+    title: "Engineered HEXNIL for iQOO Mobile Contest",
+    organization: "iQOO Quester Contest / Open Source",
+    description: "Architected AI-powered Mobile OS Update Impact Analyzer with 5-stage Predict-Prioritize-Validate-Explain loop.",
+    type: "project"
+  },
+  {
+    year: "2024",
+    period: "Mobile",
+    title: "Built TeamNexus Jetpack Compose Android Client",
+    organization: "Team Nexus (Hyderabad)",
+    description: "Co-engineered native Android Jetpack Compose app bringing EventBridge and OppFlux live feeds to mobile devices.",
     type: "project"
   },
   {
     year: "2024",
     period: "Competitive",
-    title: "10+ Hackathons & Health Insurance RAG",
+    title: "10+ Hackathons & InsureIQ RAG System",
     organization: "Hackathon Competitions",
-    description: "Shipped the Health Insurance Policy RAG Assistant with LangChain and vector retrieval; reached a milestone of 10+ hackathon sprint builds.",
+    description: "Shipped InsureIQ with LangChain, semantic PDF chunking, and clause-level citation enforcement; reached 10+ hackathons milestone.",
     type: "hackathon"
   },
   {
