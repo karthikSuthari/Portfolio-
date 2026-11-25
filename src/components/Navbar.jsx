@@ -94,7 +94,7 @@ export default function Navbar({ onOpenConnect }) {
               href={personalInfo.resumePath}
               download="Karthik_Suthari_Resume.pdf"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50 text-xs font-medium transition-all shadow-subtle hover:border-zinc-300"
-              title="Download official resume PDF (104 KB)"
+              title="Download official resume PDF (108 KB)"
             >
               <FileText className="w-3.5 h-3.5 text-zinc-500" />
               <span>Resume PDF</span>

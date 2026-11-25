@@ -67,7 +67,7 @@ export default function Hero({ onOpenConnect }) {
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-100 text-zinc-800 text-xs font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                10+ Hackathons Competitor
+                1× Hackathon Winner (10+ Competed)
               </span>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-zinc-100 text-zinc-800 text-xs font-medium">
                 <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />

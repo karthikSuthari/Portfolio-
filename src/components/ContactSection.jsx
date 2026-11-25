@@ -132,7 +132,7 @@ export default function ContactSection({ onOpenConnect }) {
                 </div>
                 <div>
                   <h4 className="font-bold text-zinc-900 text-sm">Official Engineering Resume</h4>
-                  <p className="text-[11px] text-zinc-500 font-mono">Format: Verified PDF (104 KB)</p>
+                  <p className="text-[11px] text-zinc-500 font-mono">Format: Verified PDF (108 KB)</p>
                 </div>
               </div>
 

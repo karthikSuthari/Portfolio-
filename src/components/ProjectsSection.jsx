@@ -93,18 +93,31 @@ export default function ProjectsSection() {
                   </div>
                 </div>
 
-                {/* GitHub link button */}
+                {/* Repository / Live link buttons */}
                 <div className="flex items-center gap-3">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-zinc-300 bg-white hover:bg-zinc-50 text-zinc-800 text-xs font-semibold shadow-subtle transition-all"
-                  >
-                    <Github className="w-4 h-4 text-zinc-700" />
-                    <span>View Repository</span>
-                    <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border border-zinc-300 bg-white hover:bg-zinc-50 text-zinc-800 text-xs font-semibold shadow-subtle transition-all"
+                    >
+                      <Github className="w-4 h-4 text-zinc-700" />
+                      <span>View Repository</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
+                    </a>
+                  )}
+                  {project.liveUrl && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-semibold shadow-subtle transition-all"
+                    >
+                      <span>View Live</span>
+                      <ExternalLink className="w-3.5 h-3.5 text-zinc-300" />
+                    </a>
+                  )}
                 </div>
               </div>
 

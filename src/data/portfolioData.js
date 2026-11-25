@@ -40,22 +40,27 @@ export const founderInitiative = {
   tagline: "Student networking and cross-college opportunity ecosystem",
   stage: "Live & Active Development",
   liveUrl: "https://www.eventbridge.tech",
-  overview: "EventBridge was born out of a real friction I experienced: college students operate in isolated silos, missing high-impact hackathons, struggling to assemble complementary cross-college teams, and facing logistical hurdles attending inter-college events.",
+  overview: "EventBridge was born out of a real friction I experienced: college students operate in isolated silos, missing high-impact hackathons, struggling to assemble complementary cross-college teams, and facing logistical hurdles attending inter-college events. Secured a 12-month platform partnership with 1% School for student hackathons and workshops.",
   problem: "University technology ecosystems in India are fragmented. Crucial hackathons, developer fests, and workshops are scattered across individual college circulars and WhatsApp groups. Students have no credible way to discover teammates with verified skillsets or organize shared transit to off-campus events.",
   targetAudience: "Engineering students, student developers, hackathon organizers, and inter-college student communities.",
-  ownership: "Conceived the product vision, designed system architecture, built frontend in React 18, developed Python/FastAPI microservices, configured Supabase PostgreSQL with pgvector, and orchestrated cloud deployment.",
+  ownership: "Conceived the product vision, designed system architecture, built frontend in React 18, developed Python/FastAPI microservices, configured Supabase PostgreSQL (pgvector, RLS), and orchestrated cloud deployment.",
   stack: [
     "React 18",
     "Node.js",
     "Express.js",
     "Python / FastAPI",
     "Supabase",
-    "PostgreSQL / pgvector",
+    "PostgreSQL (pgvector, RLS)",
     "Gemini 2.5 Flash",
     "PM2 & Sentry",
     "Winston Logging"
   ],
   architecturalHighlights: [
+    {
+      title: "Cross-College Discovery & 1% School Partnership",
+      description: "Built QR-verifiable student passports, custom registrations, and ride-sharing for inter-college events, securing a 12-month platform partnership with 1% School for student hackathons and workshops.",
+      tags: ["QR Passports", "1% School Partner", "Ride-Sharing", "React 18"]
+    },
     {
       title: "Semantic Resume-Based Teammate Matching",
       description: "Implemented an automated PDF parser that extracts student technical profiles and passes them to Gemini embedding models. Vectors are indexed in PostgreSQL using pgvector with cosine similarity distance operators, delivering high-precision teammate compatibility recommendations based on complementary skills.",
@@ -63,27 +68,22 @@ export const founderInitiative = {
     },
     {
       title: "Profile-Based Skill-Gap & Career Roadmaps",
-      description: "Engineered an AI-assisted roadmap engine leveraging Gemini 2.5 Flash alongside a lightweight Python recommendation service using TF-IDF and cosine similarity to benchmark student skills against target roles and generate actionable milestone paths.",
+      description: "Engineered an AI-assisted roadmap engine leveraging Gemini 2.5 Flash alongside a lightweight Python FastAPI recommendation service using TF-IDF and cosine similarity to benchmark student skills against target roles and generate actionable milestone paths.",
       tags: ["Gemini 2.5 Flash", "TF-IDF", "Python", "Skill Analysis"]
     },
     {
-      title: "Client-Side Firestore-to-Supabase Adapter",
-      description: "Engineered a custom compatibility layer that emulated document-style array operations when transitioning database backends from Firestore to Supabase. This eliminated the need for an invasive client-side rewrite and preserved rapid iteration velocity.",
-      tags: ["Architecture", "Supabase", "PostgreSQL", "Migration"]
-    },
-    {
-      title: "Production-Grade Resiliency & Telemetry",
-      description: "Wired authentication flows, payment & webhook pipelines for event registrations, gamified achievement badges, and integrated Sentry telemetry with Winston structured logging to monitor exceptions and runtime performance.",
-      tags: ["Webhooks", "Sentry", "Winston", "Gamification"]
+      title: "Firestore Compatibility Layer & PostgreSQL RLS",
+      description: "Engineered a client-side Firestore-to-Supabase compatibility layer for document-style array operations and enforced PostgreSQL Row-Level Security (RLS) policies, webhooks, and paginated queries across production data flows.",
+      tags: ["Supabase", "PostgreSQL RLS", "Webhooks", "Migration"]
     }
   ],
   featureStatus: {
     launched: [
-      "Cross-College Event Discovery Feed",
-      "Student Developer Profiles & Badges",
+      "Cross-College Event Discovery Feed & QR Passports",
+      "12-Month Platform Partnership with 1% School",
       "Semantic Teammate Recommendations (pgvector)",
       "Automated Career Roadmap Generator",
-      "Secure Auth & Event Registration Flows"
+      "PostgreSQL RLS Auth & Custom Registrations"
     ],
     inDevelopment: [
       "Inter-College Hackathon Ride-Sharing Coordination",
@@ -100,32 +100,32 @@ export const founderInitiative = {
 export const engineeringProjects = [
   {
     id: "hexnil",
-    name: "HEXNIL: Mobile OS Update Impact Intelligence",
-    badge: "AI Systems · Android OS Intelligence",
-    category: "ai",
-    role: "System Designer & AI Architect",
-    github: "https://github.com/karthikSuthari/IQOO-HexNil",
-    summary: "An AI-powered Mobile OS Update Impact Analyzer engineered for the iQOO Contest in Hyderabad. Intelligently predicts, detects, and explains how Android OS updates impact app performance and stability before and after deployment.",
-    problem: "When Android pushes a major OS version update, apps frequently suffer from background throttles, battery drain, or unexpected crashes. Developers and phone enthusiasts lack a systematic way to forecast and validate OS update regressions.",
-    solution: "Built an intelligent evaluation loop (Predict → Prioritize → Validate → Explain → Learn). Parses OS changelogs and release notes with NLP to forecast risk, prioritizes targeted hardware/software probes, and executes matched V0 (Pre-OS) vs V1 (Post-OS) benchmark experiments.",
+    name: "Hexnil: Mobile Automated Diagnostic Assistant",
+    badge: "Native Android · Diagnostic & OS Telemetry",
+    category: "mobile",
+    role: "Android & Systems Developer",
+    github: "https://github.com/karthikSuthari/HexNil",
+    summary: "A native Android diagnostic app built in Kotlin and Jetpack Compose (Material 3) that monitors real-time battery health, RAM usage, storage fragmentation, and OS metrics to compute a 0–100% device health score.",
+    problem: "After Android OS updates, users and developers lack clear visibility into battery degradation, memory pressure, storage fragmentation, and subtle performance regressions.",
+    solution: "Implemented real-time telemetry collection alongside pre- and post-update system snapshot comparisons and rule-based bug risk detection using Room (SQLite) persistence and background WorkManager scheduling.",
     stack: [
-      "Python",
-      "Android SDK",
-      "OS Benchmarking",
-      "NLP Parsing",
-      "Kotlin / Gradle",
-      "Hardware Probes"
+      "Kotlin",
+      "Jetpack Compose (Material 3)",
+      "Android Studio",
+      "MVVM",
+      "Room (SQLite)",
+      "Coroutines / Flow",
+      "WorkManager"
     ],
     workflowSteps: [
-      { step: "01", title: "Predict", desc: "Parses Android OS changelogs and system release notes to forecast API and subsystem risk." },
-      { step: "02", title: "Prioritize", desc: "Ranks targeted workloads (rendering, memory footprint, background task scheduling)." },
-      { step: "03", title: "Validate", desc: "Executes matched V0 (pre-update) vs V1 (post-update) telemetry comparisons." },
-      { step: "04", title: "Explain", desc: "Synthesizes root-cause regression reports explaining exact changes and failure vectors." },
-      { step: "05", title: "Learn", desc: "Feeds regression findings into a historical knowledge graph to improve future update predictions." }
+      { step: "01", title: "Telemetry Monitor", desc: "Tracks real-time battery health, RAM utilization, storage fragmentation, and OS metrics." },
+      { step: "02", title: "Health Scoring", desc: "Computes an actionable 0–100% device health score across core hardware/OS signals." },
+      { step: "03", title: "Snapshot Persist", desc: "Stores pre- and post-update system snapshots locally using Room (SQLite)." },
+      { step: "04", title: "Risk Detection", desc: "Runs rule-based bug risk detection scheduled reliably in the background via WorkManager." }
     ],
     engineeringLearnings: [
-      "Engineered automated diffing algorithms across Android OS permission models and battery optimization policies.",
-      "Built specifically for the iQOO flagship technical contest in Hyderabad, combining mobile hardware insights with software intelligence."
+      "Architected reactive UI updates with Kotlin Coroutines/Flow and MVVM separation.",
+      "Scheduled resilient background diagnostic snapshots using Android WorkManager and Room persistence."
     ]
   },
   {
@@ -164,7 +164,7 @@ export const engineeringProjects = [
     badge: "Automated Data Pipeline & GenAI",
     category: "cloud",
     role: "Lead Developer & Systems Architect",
-    github: "https://github.com/karthikSuthari/OppFlux",
+    liveUrl: "https://www.eventbridge.tech/oppflux",
     summary: "An automated web intelligence pipeline that crawls the web for student tech events, synthesizes structured metadata with Gemini & Groq, and moderates content through a Discord human-in-the-loop workflow before distribution.",
     problem: "Student opportunities and hackathons are announced across dozens of disparate sites, portals, and social channels with inconsistent formats, making manual tracking time-prohibitive and error-prone.",
     solution: "A self-healing automation pipeline that aggregates RSS feeds and executes headless Puppeteer crawlers to discover announcements, runs LLM extraction for normalized JSON schema generation, and presents interactive Discord cards for human review.",
@@ -305,12 +305,22 @@ export const leadershipAndCommunity = [
   {
     id: "hackathons-streak",
     category: "Competitive Building",
-    title: "10+ Hackathons Competitor & Builder",
+    title: "1× Hackathon Winner & ArtisansHub",
     role: "Full-Stack & Applied AI Engineer",
-    location: "National & Regional Hackathons",
+    location: "Google Cloud Gen AI Exchange & Regional",
     image: null,
-    description: "Competed in over 10 national and regional hackathons, shipping prototypes within 24 to 36-hour sprint windows. Built document RAG systems, student networking tools, and AI automation engines under intense operational pressure.",
-    badge: "10+ Hackathons"
+    description: "1× Hackathon Winner with 10+ sprint builds. Built ArtisansHub (voice-first artisan marketplace using Vertex AI) for the Google Cloud Gen AI Exchange Hackathon, plus RAG and automation prototypes.",
+    badge: "1× Hackathon Winner"
+  },
+  {
+    id: "certifications-ecosystem",
+    category: "Certifications & Developer Chapters",
+    title: "Google Cloud Gen AI, Microsoft Secure AI & ISOC",
+    role: "Certified Builder & Chapter Participant",
+    location: "Hyderabad Tech Ecosystem",
+    image: null,
+    description: "Earned Google Cloud Gen AI Academy 2.0 skill badges and completed the Adobe Digital Tooling Track; active participant in Microsoft Hyderabad Secure AI and the Internet Society (ISOC) Hyderabad Chapter.",
+    badge: "Cloud & AI Community"
   }
 ];
 
@@ -332,18 +342,18 @@ export const skillsCategories = [
   },
   {
     category: "Native Android & Mobile Systems",
-    description: "Modern Android development & OS update intelligence",
-    skills: ["Android Studio", "Kotlin", "Jetpack Compose", "Material 3", "MVVM & StateFlow", "Coroutines", "OkHttp", "OS Telemetry Probes"]
+    description: "Modern Android development & diagnostic telemetry",
+    skills: ["Android Studio", "Kotlin", "Jetpack Compose", "Material 3", "Room (SQLite)", "WorkManager", "MVVM & StateFlow", "Coroutines", "OkHttp"]
   },
   {
     category: "Databases & Cloud Infrastructure",
-    description: "Data persistence, cloud hosting, and process orchestration",
-    skills: ["Supabase", "PostgreSQL", "MySQL", "Oracle Cloud VM", "PM2 Process Manager", "GitHub Actions", "Sentry Telemetry", "Winston Logging"]
+    description: "Data persistence, security policies, and cloud hosting",
+    skills: ["Supabase", "PostgreSQL (pgvector, RLS)", "MySQL", "Oracle Cloud Infrastructure (OCI)", "PM2 Process Manager", "GitHub Actions", "Sentry Telemetry", "Winston Logging"]
   },
   {
     category: "Automation, Tooling & Foundations",
-    description: "Web scraping, bot SDKs, algorithms and OOP",
-    skills: ["Puppeteer Headless", "Discord.js Bot SDK", "Google Sheets & Drive APIs", "Git & GitHub", "Data Structures & Algorithms", "OOP & System Design"]
+    description: "Web scraping, API testing, bot SDKs, and algorithms",
+    skills: ["Puppeteer Headless", "Discord.js Bot SDK", "Postman", "Git, GitHub & GitLab", "Google Sheets & Drive APIs", "Data Structures & Algorithms", "OOP & System Design"]
   }
 ];
 
